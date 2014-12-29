@@ -1,0 +1,56 @@
+﻿<Window x:Class="TarQIE_UI.CheckAnalysisList"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="CheckAnalysisList" Height="480" Width="600">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <Canvas Grid.Row="0" Background="#FF344A70" >
+            <Label Content="TarQIE" FontSize="35" FontWeight="ExtraBold" Foreground="AliceBlue"
+				FontFamily="Source Code Pro Black" Height="50" Width="140" Canvas.Left="230" />
+            <Label Content="by HashValLi" FontSize="20" Canvas.Bottom="0" Canvas.Right="0"
+				FontFamily="Source Code Pro Black" Foreground="#FF61B4CD" />
+        </Canvas>
+        <Canvas Grid.Row="1" >
+            <Canvas.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF344A70" Offset="0.16"/>
+                    <GradientStop Color="Gray" Offset="1"/>
+                </LinearGradientBrush>
+            </Canvas.Background>
+            <Label Content="Edit CAList" FontSize="30" Canvas.Bottom="0" Canvas.Left="20"
+                   FontWeight="ExtraBold"/>
+        </Canvas>
+        <Canvas Grid.Row="2" Background="Gray">
+            <Label Content="Tasks" FontSize="20" Canvas.Left="20" Canvas.Top="4"
+                   FontWeight="ExtraBold" Width="160"/>
+            <ListBox Name="WTasks" Width="160" Height="240" Canvas.Left="20" Canvas.Top="40">
+            </ListBox>
+            <Label Content="Problems" FontSize="20" FontWeight="ExtraBold"
+                   Canvas.Right="80" Canvas.Top="4" Canvas.Left="208" Width="160"/>
+            <TextBox TextWrapping="Wrap" Width="160" Height="240" 
+                     Canvas.Top="40" Canvas.Right="20"/>
+            <Label Content="Solutions" FontSize="20" FontWeight="ExtraBold"
+                   Canvas.Right="80" Canvas.Top="-1" Canvas.Left="408" Width="160"/>
+            <TextBox TextWrapping="Wrap" Width="160" Height="240" 
+            	Canvas.Right="20" Canvas.Top="40" Canvas.Left="208"/>
+        </Canvas>
+
+        <Canvas Grid.Row="3" >
+            <Canvas.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="Gray" Offset="0.469"/>
+                </LinearGradientBrush>
+            </Canvas.Background>
+            <Button Name="OKButton" Content="OK " FontSize="20" Width="80" Height="30"
+                    Canvas.Right="100" Canvas.Top="-5" Background="Gray" Focusable="False" Click="OKButton_Click"/>
+            <Button Name="CancelButton" Content="Cancel " FontSize="20" Width="80" Height="30" 
+                    Canvas.Right="10" Canvas.Top="-5" Background="Gray" Focusable="False" Click="CancelButton_Click"/>
+        </Canvas>
+    </Grid>
+</Window>
